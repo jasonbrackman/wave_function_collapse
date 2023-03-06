@@ -1,4 +1,4 @@
-Randomly Generate Interlocking Images 
+Randomly Generate Interlocking Ascii Characters 
 
 ```
 ╔═╗╔╗╔╦╗ ╔╗╔╗╔╦╗  ╔╦╦═╗╔╦╗╔╗ ╔═══╗╔╦╦═╗╔╗╔═╦═╦══╦╦╦╗  ╔╦═╦╗ ╔╗ ╔╗ ╔╦╦╦╦╦═══╗╔═╗ ╔╦╗   ╔═╦╗   ╔══╗ ╔╗  ╔═╗╔═╗╔═╦╗╔═╦╗  
