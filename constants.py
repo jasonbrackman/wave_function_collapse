@@ -1,14 +1,14 @@
 VERT = "║"
-VERT_LEFT =          "╣"
-VERT_RIGHT =         "╠"
+VERT_LEFT = "╣"
+VERT_RIGHT = "╠"
 UPPER_RIGHT_CORNER = "╗"
-UPPER_LEFT_CORNER =  "╔"
+UPPER_LEFT_CORNER = "╔"
 LOWER_RIGHT_CORNER = "╝"
-LOWER_LEFT_CORNER =  "╚"
-HORIZ_UP =           "╩"
-HORIZ_DOWN =         "╦"
-HORIZ =              "═"
-BLANK =              " "
+LOWER_LEFT_CORNER = "╚"
+HORIZ_UP = "╩"
+HORIZ_DOWN = "╦"
+HORIZ = "═"
+BLANK = " "
 ALL = [
     VERT_LEFT,
     VERT,
@@ -82,35 +82,163 @@ rules = {
         },
     },
     VERT_RIGHT: {
-        "w": {BLANK, VERT_LEFT, VERT, UPPER_RIGHT_CORNER, LOWER_RIGHT_CORNER, },
-        "e": {VERT_LEFT, UPPER_RIGHT_CORNER, LOWER_RIGHT_CORNER, HORIZ_UP, HORIZ_DOWN, HORIZ, },
-        "n": {VERT_LEFT, VERT, VERT_RIGHT, UPPER_RIGHT_CORNER, UPPER_LEFT_CORNER, HORIZ_DOWN, },
-        "s": {VERT_LEFT, VERT, VERT_RIGHT, LOWER_RIGHT_CORNER, LOWER_LEFT_CORNER, HORIZ_UP, },
+        "w": {
+            BLANK,
+            VERT_LEFT,
+            VERT,
+            UPPER_RIGHT_CORNER,
+            LOWER_RIGHT_CORNER,
+        },
+        "e": {
+            VERT_LEFT,
+            UPPER_RIGHT_CORNER,
+            LOWER_RIGHT_CORNER,
+            HORIZ_UP,
+            HORIZ_DOWN,
+            HORIZ,
+        },
+        "n": {
+            VERT_LEFT,
+            VERT,
+            VERT_RIGHT,
+            UPPER_RIGHT_CORNER,
+            UPPER_LEFT_CORNER,
+            HORIZ_DOWN,
+        },
+        "s": {
+            VERT_LEFT,
+            VERT,
+            VERT_RIGHT,
+            LOWER_RIGHT_CORNER,
+            LOWER_LEFT_CORNER,
+            HORIZ_UP,
+        },
     },
     UPPER_RIGHT_CORNER: {
-        "w": {VERT_RIGHT, UPPER_LEFT_CORNER, HORIZ_UP, HORIZ_DOWN, HORIZ,},
-        "e": {BLANK, VERT, VERT_RIGHT, UPPER_LEFT_CORNER, LOWER_LEFT_CORNER, },
-        "n": {BLANK, LOWER_RIGHT_CORNER, LOWER_LEFT_CORNER, HORIZ_UP, HORIZ, },
-        "s": {VERT_LEFT, VERT, VERT_RIGHT, LOWER_RIGHT_CORNER, LOWER_LEFT_CORNER, HORIZ_UP,},
+        "w": {
+            VERT_RIGHT,
+            UPPER_LEFT_CORNER,
+            HORIZ_UP,
+            HORIZ_DOWN,
+            HORIZ,
+        },
+        "e": {
+            BLANK,
+            VERT,
+            VERT_RIGHT,
+            UPPER_LEFT_CORNER,
+            LOWER_LEFT_CORNER,
+        },
+        "n": {
+            BLANK,
+            LOWER_RIGHT_CORNER,
+            LOWER_LEFT_CORNER,
+            HORIZ_UP,
+            HORIZ,
+        },
+        "s": {
+            VERT_LEFT,
+            VERT,
+            VERT_RIGHT,
+            LOWER_RIGHT_CORNER,
+            LOWER_LEFT_CORNER,
+            HORIZ_UP,
+        },
     },
     UPPER_LEFT_CORNER: {
-        "w": {BLANK, VERT_LEFT, VERT, UPPER_RIGHT_CORNER, LOWER_RIGHT_CORNER, },
-        "e": {VERT_LEFT, UPPER_RIGHT_CORNER, LOWER_RIGHT_CORNER, HORIZ_UP, HORIZ_DOWN, HORIZ, },
-        "n": {BLANK, LOWER_RIGHT_CORNER, LOWER_LEFT_CORNER, HORIZ_UP, HORIZ, },
-        "s": {VERT_LEFT, VERT, VERT_RIGHT, LOWER_RIGHT_CORNER, LOWER_LEFT_CORNER, HORIZ_UP,
+        "w": {
+            BLANK,
+            VERT_LEFT,
+            VERT,
+            UPPER_RIGHT_CORNER,
+            LOWER_RIGHT_CORNER,
+        },
+        "e": {
+            VERT_LEFT,
+            UPPER_RIGHT_CORNER,
+            LOWER_RIGHT_CORNER,
+            HORIZ_UP,
+            HORIZ_DOWN,
+            HORIZ,
+        },
+        "n": {
+            BLANK,
+            LOWER_RIGHT_CORNER,
+            LOWER_LEFT_CORNER,
+            HORIZ_UP,
+            HORIZ,
+        },
+        "s": {
+            VERT_LEFT,
+            VERT,
+            VERT_RIGHT,
+            LOWER_RIGHT_CORNER,
+            LOWER_LEFT_CORNER,
+            HORIZ_UP,
         },
     },
     LOWER_RIGHT_CORNER: {
-        "w": {UPPER_LEFT_CORNER, LOWER_LEFT_CORNER, HORIZ_UP, HORIZ_DOWN, HORIZ, },
-        "e": {BLANK, VERT, VERT_RIGHT, UPPER_LEFT_CORNER, LOWER_LEFT_CORNER, },
-        "n": {VERT_LEFT, VERT, VERT_RIGHT, UPPER_RIGHT_CORNER, UPPER_LEFT_CORNER, HORIZ_DOWN, },
-        "s": {BLANK, UPPER_RIGHT_CORNER, UPPER_LEFT_CORNER, HORIZ_DOWN, HORIZ, },
+        "w": {
+            UPPER_LEFT_CORNER,
+            LOWER_LEFT_CORNER,
+            HORIZ_UP,
+            HORIZ_DOWN,
+            HORIZ,
+        },
+        "e": {
+            BLANK,
+            VERT,
+            VERT_RIGHT,
+            UPPER_LEFT_CORNER,
+            LOWER_LEFT_CORNER,
+        },
+        "n": {
+            VERT_LEFT,
+            VERT,
+            VERT_RIGHT,
+            UPPER_RIGHT_CORNER,
+            UPPER_LEFT_CORNER,
+            HORIZ_DOWN,
+        },
+        "s": {
+            BLANK,
+            UPPER_RIGHT_CORNER,
+            UPPER_LEFT_CORNER,
+            HORIZ_DOWN,
+            HORIZ,
+        },
     },
     LOWER_LEFT_CORNER: {
-        "w": {BLANK, VERT_LEFT, VERT, UPPER_RIGHT_CORNER, LOWER_RIGHT_CORNER, },
-        "e": {VERT_LEFT, UPPER_RIGHT_CORNER, LOWER_RIGHT_CORNER, HORIZ_UP, HORIZ_DOWN, HORIZ, },
-        "n": {VERT_LEFT, VERT, VERT_RIGHT, UPPER_RIGHT_CORNER, UPPER_LEFT_CORNER, HORIZ_DOWN, },
-        "s": {BLANK, UPPER_RIGHT_CORNER, UPPER_LEFT_CORNER, HORIZ_DOWN, HORIZ, },
+        "w": {
+            BLANK,
+            VERT_LEFT,
+            VERT,
+            UPPER_RIGHT_CORNER,
+            LOWER_RIGHT_CORNER,
+        },
+        "e": {
+            VERT_LEFT,
+            UPPER_RIGHT_CORNER,
+            LOWER_RIGHT_CORNER,
+            HORIZ_UP,
+            HORIZ_DOWN,
+            HORIZ,
+        },
+        "n": {
+            VERT_LEFT,
+            VERT,
+            VERT_RIGHT,
+            UPPER_RIGHT_CORNER,
+            UPPER_LEFT_CORNER,
+            HORIZ_DOWN,
+        },
+        "s": {
+            BLANK,
+            UPPER_RIGHT_CORNER,
+            UPPER_LEFT_CORNER,
+            HORIZ_DOWN,
+            HORIZ,
+        },
     },
     HORIZ_UP: {
         "w": {
@@ -140,15 +268,68 @@ rules = {
         "s": {UPPER_LEFT_CORNER, UPPER_RIGHT_CORNER, HORIZ_DOWN, HORIZ, BLANK},
     },
     HORIZ_DOWN: {
-        "w": {VERT_RIGHT, UPPER_LEFT_CORNER, LOWER_LEFT_CORNER, HORIZ_UP, HORIZ_DOWN, HORIZ, },
-        "e": {VERT_LEFT, UPPER_RIGHT_CORNER, LOWER_RIGHT_CORNER, HORIZ_UP, HORIZ_DOWN, HORIZ, },
-        "n": {BLANK, LOWER_RIGHT_CORNER, LOWER_LEFT_CORNER, HORIZ_UP, HORIZ, },
-        "s": {VERT_LEFT, VERT, VERT_RIGHT, LOWER_RIGHT_CORNER, LOWER_LEFT_CORNER, HORIZ_UP,},
+        "w": {
+            VERT_RIGHT,
+            UPPER_LEFT_CORNER,
+            LOWER_LEFT_CORNER,
+            HORIZ_UP,
+            HORIZ_DOWN,
+            HORIZ,
+        },
+        "e": {
+            VERT_LEFT,
+            UPPER_RIGHT_CORNER,
+            LOWER_RIGHT_CORNER,
+            HORIZ_UP,
+            HORIZ_DOWN,
+            HORIZ,
+        },
+        "n": {
+            BLANK,
+            LOWER_RIGHT_CORNER,
+            LOWER_LEFT_CORNER,
+            HORIZ_UP,
+            HORIZ,
+        },
+        "s": {
+            VERT_LEFT,
+            VERT,
+            VERT_RIGHT,
+            LOWER_RIGHT_CORNER,
+            LOWER_LEFT_CORNER,
+            HORIZ_UP,
+        },
     },
     HORIZ: {
-        "w": {VERT_RIGHT, UPPER_LEFT_CORNER, LOWER_LEFT_CORNER, HORIZ_UP, HORIZ_DOWN, HORIZ, },
-        "e": {VERT_LEFT, UPPER_RIGHT_CORNER, LOWER_RIGHT_CORNER, HORIZ_UP, HORIZ_DOWN, HORIZ, },
-        "n": {BLANK, LOWER_RIGHT_CORNER, LOWER_LEFT_CORNER, HORIZ_UP, HORIZ, },
-        "s": {BLANK, UPPER_RIGHT_CORNER, UPPER_LEFT_CORNER, HORIZ_DOWN, HORIZ, },
+        "w": {
+            VERT_RIGHT,
+            UPPER_LEFT_CORNER,
+            LOWER_LEFT_CORNER,
+            HORIZ_UP,
+            HORIZ_DOWN,
+            HORIZ,
+        },
+        "e": {
+            VERT_LEFT,
+            UPPER_RIGHT_CORNER,
+            LOWER_RIGHT_CORNER,
+            HORIZ_UP,
+            HORIZ_DOWN,
+            HORIZ,
+        },
+        "n": {
+            BLANK,
+            LOWER_RIGHT_CORNER,
+            LOWER_LEFT_CORNER,
+            HORIZ_UP,
+            HORIZ,
+        },
+        "s": {
+            BLANK,
+            UPPER_RIGHT_CORNER,
+            UPPER_LEFT_CORNER,
+            HORIZ_DOWN,
+            HORIZ,
+        },
     },
 }
